@@ -1,0 +1,11 @@
+1.π Title (σ Genres.Name='Sci-Fi' (Movies ⨝ Genres))
+
+2.π Firstname,Lastname (((σ Runtime>150 ∨ Budget>200000000 Movies) ⨝ PersonsMovies) ⨝ Persons)
+
+3. π Title(σ Runtime<120 ∨ Runtime>180(σ Firstname = 'James' ∧ Lastname='Cameron'(Persons ⨝ (Movies ⨝ PersonsMovies))))
+
+4.σ Name='Action' ∧ SequelOf ≠ null (Movies ⨝ Genres)
+
+5.σ Name='Action' ∨ SequelOf ≠ null (Movies ⨝ Genres)
+
+6. σ  SequelOf=null (Movies)
